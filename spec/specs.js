@@ -2,6 +2,9 @@ describe('toPigLatin', function() {
   it('return a simple word in pig latin', function() {
     expect(toPigLatin('word ')).to.equal('ordway ');
   });
+  it('return a simple word in pig latin', function() {
+    expect(toPigLatin(' word ')).to.equal(' ordway ');
+  });
   it('return a simple word with multiple consonants at the beginning in pig latin', function() {
     expect(toPigLatin('school ')).to.equal('oolschay ');
   });
