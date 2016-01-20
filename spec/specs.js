@@ -9,3 +9,8 @@ describe('findWord', function() {
     expect(findWord("first word in the sentence.", 18)).to.equal("sentence");
   });
 });
+describe('isFirstVowel',function(){
+  it('return false if first character in string is not a vowel',function(){
+    expect(isFirstVowel('first')).to.equal(false);
+  });
+});
