@@ -67,13 +67,11 @@ var toPigLatin = function(inputString) {
     while (inputString[stringIndex]===' ' || inputString[stringIndex]===".") {
       stringIndex ++;
     }
-    // grab the word
-    var wordToTranslate = findWord(inputString, stringIndex);
     // determine how to change to piglatin based on the presence of a vowel at the start
-    if (isFirstVowel(wordToTranslate)) {
-      var wordInPigLatin = addEnding(wordToTranslate);
+    if (isFirstVowel(findWord(inputString, stringIndex))) {
+      var wordInPigLatin = addEnding(findWord(inputString, stringIndex));
     } else {
-      var wordInPigLatin = addEnding(moveConsonants(wordToTranslate));
+      var wordInPigLatin = addEnding(moveConsonants(findWord(inputString, stringIndex)));
     }
     // replace the word with its pigLatin equivalent
      inputString = inputString.slice(0,stringIndex) + wordInPigLatin + inputString.slice(stringIndex + wordToTranslate.length);
