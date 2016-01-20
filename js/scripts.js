@@ -64,7 +64,7 @@ var toPigLatin = function(inputString) {
   var stringIndex = 0;
   // loop through the string searching for words
   do {
-    while (inputString[stringIndex]===' ') {
+    while (inputString[stringIndex]===' ' || inputString[stringIndex]===".") {
       stringIndex ++;
     }
     // grab the word

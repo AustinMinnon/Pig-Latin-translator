@@ -17,6 +17,9 @@ describe('toPigLatin', function() {
   it('return many words in correct pig latin, input ends in a period', function() {
     expect(toPigLatin('school today was super duper fun.')).to.equal('oolschay odaytay asway upersay uperday unfay.');
   });
+  it('return multiple sentences in correct pig latin', function() {
+    expect(toPigLatin('School today was super duper fun.  I like chickens.')).to.equal('oolSchay odaytay asway upersay uperday unfay.  Iay ikelay ickenschay.');
+  });
 });
 describe('findWord', function() {
   it('return a string of characters before the first space in the input string', function() {
