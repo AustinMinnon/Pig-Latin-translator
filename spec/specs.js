@@ -16,5 +16,9 @@ describe('isFirstVowel',function(){
   it('return true if first character in string IS a vowel',function(){
     expect(isFirstVowel('any')).to.equal(true);
   });
-
+});
+describe('addEnding',function(){
+  it('add ay to the end of a word',function(){
+    expect(addEnding("another")).to.equal("anotheray");
+  });
 });

@@ -9,10 +9,13 @@ var findWord = function(inputString, inputIndex) {
 }
 
 var isFirstVowel = function(word){
-  if (/[aeiou]/.test(word[0])){
-    return true;
-  } else {
-    // return false if first letter is NOT a vowel
-    return false;
-  }
+  // ***Initial code
+  // if (/[aeiou]/.test(word[0])) {
+  //   return true;
+  // } else {
+  //   // return false if first letter is NOT a vowel
+  //   return false;
+  // }
+  // *** Refractored Code
+  return /[aeiou]/.test(word[0]);
 }
