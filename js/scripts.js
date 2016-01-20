@@ -53,10 +53,5 @@ var moveConsonants = function(word){
 }
 
 var toPigLatin = function(inputString) {
-  // identify the first word
-  // traslate to pigLatin
-  var fixedConsonants = moveConsonants(inputString);
-  var endingAdded = addEnding(fixedConsonants);
-  //return the pigLatin
-  return endingAdded;
+  return addEnding(moveConsonants(inputString));
 }
