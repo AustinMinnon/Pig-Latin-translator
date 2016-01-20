@@ -13,4 +13,8 @@ describe('isFirstVowel',function(){
   it('return false if first character in string is not a vowel',function(){
     expect(isFirstVowel('first')).to.equal(false);
   });
+  it('return true if first character in string IS a vowel',function(){
+    expect(isFirstVowel('any')).to.equal(true);
+  });
+
 });
