@@ -1,3 +1,8 @@
+describe('toPigLatin', function() {
+  it('return a simple word in pig latin', function() {
+    expect(toPigLatin('word')).to.equal('ordway');
+  });
+});
 describe('findWord', function() {
   it('return a string of characters before the first space in the input string', function() {
     expect(findWord("first word in the sentence", 0)).to.equal("first");
