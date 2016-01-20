@@ -7,3 +7,8 @@ var findWord = function(inputString, inputIndex) {
   // return a slice of the input from 0 to the first space
   return inputString.slice(inputIndex, spaceIndex);
 }
+
+var isFirstVowel = function(word){
+  // return false if first letter is NOT a vowel
+  return false;
+}
