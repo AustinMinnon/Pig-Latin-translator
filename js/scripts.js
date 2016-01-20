@@ -19,3 +19,10 @@ var isFirstVowel = function(word){
   // *** Refractored Code
   return /[aeiou]/.test(word[0]);
 }
+var addEnding = function(word){
+  // add ay to ending of word
+  var plWord = word + "ay";
+
+  // return word with ay added
+    return plWord;
+}
