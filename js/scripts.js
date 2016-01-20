@@ -53,5 +53,29 @@ var moveConsonants = function(word){
 }
 
 var toPigLatin = function(inputString) {
-  return addEnding(moveConsonants(inputString));
+  // // identify the first word
+  // // traslate to pigLatin
+  // var fixedConsonants = moveConsonants(inputString);
+  // var endingAdded = addEnding(fixedConsonants);
+  // //return the pigLatin
+  // return endingAdded;
+
+  // track where in the string we are
+  var stringIndex = 0;
+  // loop through the string searching for words
+  do {
+    // grab the word
+    var wordToTranslate = findWord(inputString, stringIndex);
+    // determine how to change to piglatin based on the presence of a vowel at the start
+    if (isFirstVowel(wordToTranslate)) {
+      var wordInPigLatin = addEnding(wordToTranslate);
+    } else {
+      var wordInPigLatin = addEnding(moveConsonants(wordToTranslate));
+    }
+    // replace the word with its pigLatin equivalent
+     inputString = inputString.slice(0,stringIndex) + wordInPigLatin + inputString.slice(stringIndex + wordToTranslate.length);
+    // update index
+    stringIndex = stringIndex + wordInPigLatin.length+1;
+  } while (stringIndex+1 <= inputString.length);
+  return inputString;
 }
