@@ -18,11 +18,13 @@ describe('isFirstVowel',function(){
   });
 });
 describe('moveConsonants',function(){
-  it('remove consonant, add to end',function(){
+  it('remove first consonant, add to end',function(){
     expect(moveConsonants("cat")).to.equal("atc");
   });
+  it('remove multiple consonants, add all to end',function(){
+    expect(moveConsonants("schlep")).to.equal("epschl");
+  });
 });
-
 describe('addEnding',function(){
   it('add ay to the end of a word',function(){
     expect(addEnding("another")).to.equal("anotheray");

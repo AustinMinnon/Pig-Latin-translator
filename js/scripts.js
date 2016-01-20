@@ -17,7 +17,7 @@ var isFirstVowel = function(word){
   //   return false;
   // }
   // *** Refractored Code
-  return /[aeiou]/.test(word[0]);
+  return /[aeiou]/i.test(word[0]);
 }
 var addEnding = function(word){
   // ***Initial code
@@ -32,10 +32,14 @@ var addEnding = function(word){
 }
 
 var moveConsonants = function(word){
-  // copy first letter to back
-  var result = word + word[0];
-  // remove first letter
-  var result2 = result.slice(1);
-  // return results
-  return result2;
+  // ***Initial code
+  // // copy first letter to back
+  // var result = (word + word[0]);
+  // // remove first letter
+  // var result2 = result.slice(1);
+  // // return results
+  // return result2;
+
+  // ***Refractored code
+  return (word + word[0]).slice(1);
 }
