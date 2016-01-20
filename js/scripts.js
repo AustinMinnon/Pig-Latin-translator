@@ -1,7 +1,7 @@
 var findWord = function(inputString, inputIndex) {
   // loop that starts at the first letter, and continues until it finds a space
   var spaceIndex = inputIndex;
-  for(var i=inputIndex; inputString[i]!==" " && inputString[i]!=="."; i++ ) {
+  for(var i=inputIndex; inputString[i]!==" " && inputString[i]!=="." && i < inputString.length; i++ ) {
     spaceIndex ++;
   }
   // return a slice of the input from 0 to the first space
@@ -64,6 +64,9 @@ var toPigLatin = function(inputString) {
   var stringIndex = 0;
   // loop through the string searching for words
   do {
+    while (inputString[stringIndex]===' ') {
+      stringIndex ++;
+    }
     // grab the word
     var wordToTranslate = findWord(inputString, stringIndex);
     // determine how to change to piglatin based on the presence of a vowel at the start
@@ -75,7 +78,7 @@ var toPigLatin = function(inputString) {
     // replace the word with its pigLatin equivalent
      inputString = inputString.slice(0,stringIndex) + wordInPigLatin + inputString.slice(stringIndex + wordToTranslate.length);
     // update index
-    stringIndex = stringIndex + wordInPigLatin.length+1;
-  } while (stringIndex+1 <= inputString.length);
+    stringIndex = stringIndex + wordInPigLatin.length;
+  } while (stringIndex+1 < inputString.length);
   return inputString;
 }

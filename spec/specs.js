@@ -5,11 +5,17 @@ describe('toPigLatin', function() {
   it('return a simple word with multiple consonants at the beginning in pig latin', function() {
     expect(toPigLatin('school ')).to.equal('oolschay ');
   });
-  // it('return a simple word that ends the string, no space or period', function() {
-  //   expect(toPigLatin('school')).to.equal('oolschay');
-  // });
+  it('return a simple word that ends the string, no space or period', function() {
+    expect(toPigLatin('school')).to.equal('oolschay');
+  });
   it('return two words in correct pig latin', function() {
     expect(toPigLatin('school today ')).to.equal('oolschay odaytay ');
+  });
+  it('return many words in correct pig latin', function() {
+    expect(toPigLatin('school today was super duper fun')).to.equal('oolschay odaytay asway upersay uperday unfay');
+  });
+  it('return many words in correct pig latin, input ends in a period', function() {
+    expect(toPigLatin('school today was super duper fun.')).to.equal('oolschay odaytay asway upersay uperday unfay.');
   });
 });
 describe('findWord', function() {
