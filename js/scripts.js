@@ -48,7 +48,6 @@ var moveConsonants = function(word){
     sliceIndex = i;
   }
   // slice off first group of consonants, put of back
-  var resultingWord = word.slice(sliceIndex+1) + word.slice(0,sliceIndex+1);
   // return the result
-  return resultingWord;
+  return word.slice(sliceIndex+1) + word.slice(0,sliceIndex+1);
 }
