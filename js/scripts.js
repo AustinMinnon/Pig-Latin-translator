@@ -20,9 +20,13 @@ var isFirstVowel = function(word){
   return /[aeiou]/.test(word[0]);
 }
 var addEnding = function(word){
-  // add ay to ending of word
-  var plWord = word + "ay";
+  // ***Initial code
+  // // add ay to ending of word
+  // var plWord = word + "ay";
+  //
+  // // return word with ay added
+  // return plWord;
 
-  // return word with ay added
-    return plWord;
+  // ***Refractored code
+  return word + "ay";
 }
