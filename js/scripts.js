@@ -30,3 +30,12 @@ var addEnding = function(word){
   // ***Refractored code
   return word + "ay";
 }
+
+var moveConsonants = function(word){
+  // copy first letter to back
+  var result = word + word[0];
+  // remove first letter
+  var result2 = result.slice(1);
+  // return results
+  return result2;
+}
